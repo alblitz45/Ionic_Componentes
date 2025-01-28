@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>PlayStation 4</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/lista"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="false">
+  <div class="ion-content-scroll-host">
+    <ion-list>
+      <ion-reorder-group [disabled]="false" (ionItemReorder)="handleReorder($any($event))">
+        
+        <ion-item>
+          <ion-label>
+            <h2>Grand Theft Auto V</h2>
+            <h3 style="font-size: 0.9rem; color: gray;">25 millones de copias vendidas</h3>
+          </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <h2>Uncharted 4: A Thief's End</h2>
+            <h3 style="font-size: 0.9rem; color: gray;">16 millones de copias vendidas</h3>
+          </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <h2>The Last of Us Part II</h2>
+            <h3 style="font-size: 0.9rem; color: gray;">10 millones de copias vendidas</h3>
+          </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+        
+      </ion-reorder-group>
+    </ion-list>
+  </div>
+</ion-content>

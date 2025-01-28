@@ -1,20 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>Inicio de Sesión</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <form #formularioLogin="ngForm" (ngSubmit)="login(formularioLogin)">
+    <ion-item>
+      <ion-input
+        placeholder="Correo Electrónico"
+        type="email"
+        name="email"
+        [(ngModel)]="email"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        placeholder="Contraseña"
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit">
+      Ingresar
+    </ion-button>
+  </form>
+  <ion-item lines="none">
+    <ion-label>
+      ¿No tienes cuenta? 
+      <a href="/crear-cuenta" style="color: var(--ion-color-primary);">Crear cuenta nueva</a>
+    </ion-label>
+  </ion-item>
 </ion-content>

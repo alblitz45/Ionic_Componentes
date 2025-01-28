@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Cuenta</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formularioCrearCuenta="ngForm" (ngSubmit)="crearCuenta(formularioCrearCuenta)">
+    <ion-item>
+      <ion-input
+        placeholder="Ingresa tu nombre"
+        type="text"
+        name="nombre"
+        [(ngModel)]="nombre"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        placeholder="Correo Electrónico"
+        type="email"
+        name="email"
+        [(ngModel)]="email"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        placeholder="Número de telefono"
+        type="tel"
+        name="telefono"
+        [(ngModel)]="telefono"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        placeholder="Contraseña"
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        placeholder="Confirmar Contraseña"
+        type="password"
+        name="confirmPassword"
+        [(ngModel)]="confirmPassword"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit">
+      Crear Cuenta
+    </ion-button>
+  </form>
+</ion-content>
